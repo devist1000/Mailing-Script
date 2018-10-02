@@ -2,12 +2,13 @@ import smtplib
 import csv
 import re
  
-email = ""
-password = ""
+email = ""      #email address
+password = ""   # passwprd
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
 server.login(username, password)
 
+#where db.cse is the name of the database file
 with open('db.csv') as data:
 	row = csv.DictReader(data)
 	for line in row:
